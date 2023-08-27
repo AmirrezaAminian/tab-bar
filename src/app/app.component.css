@@ -1,0 +1,24 @@
+.header{
+    transform: scale(0.8);
+    height: 100vh;
+}
+
+.modal-close{
+     margin: 1rem;
+     
+}
+
+.scale{
+    transform: scale(0.9);
+    /* margin-top: -10rem; */
+}
+
+.btn{
+    background-color: skyblue;
+    color: black;
+    margin: 5rem 10rem;
+    padding: 1.1rem 2rem;
+    border-radius: 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
