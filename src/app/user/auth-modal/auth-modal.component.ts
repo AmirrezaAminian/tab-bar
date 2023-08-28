@@ -6,6 +6,6 @@ import { Component , Input } from '@angular/core';
   styleUrls: ['./auth-modal.component.css']
 })
 export class AuthModalComponent {
-  
+  @Input() hidden = false ;
 
 }
