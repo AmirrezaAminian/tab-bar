@@ -1,20 +1,16 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output  } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent  implements OnInit{
-   hidden = false ;
+export class AppComponent  {
   
- 
+  hidden = false
 
-  isHidden(){
-    this.hidden = !this.hidden  ;
-  }
-
-  ngOnInit(): void {
+  ishidden(){
+    this.hidden = !this.hidden
   }
 }
- 
+  
