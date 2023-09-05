@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output  } from '@angular/core';
 })
 export class AppComponent  {
   
-  hidden = false
+  hidden = true
 
   ishidden(){
     this.hidden = !this.hidden
