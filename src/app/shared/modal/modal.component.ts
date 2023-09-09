@@ -6,23 +6,17 @@ import {
   Output,
   SimpleChanges,
 } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
 })
-export class ModalComponent implements OnChanges {
-  @Input() ModalHide = false;
+export class ModalComponent  {
 
-  @Output() modalHideChange = new EventEmitter();
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.ModalHide);
+  constructor(public modal : ModalService){
+    
   }
-
-  modalBinder() {
-    this.ModalHide = !this.ModalHide;
-    this.modalHideChange.emit(this.ModalHide);
-  }
+   
 }

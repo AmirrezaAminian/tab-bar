@@ -1,31 +1,23 @@
-import { Component , EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
+import { Component , EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
+import { ModalService } from 'src/app/services/modal.service';
 
 @Component({
   selector: 'app-auth-modal',
   templateUrl: './auth-modal.component.html',
   styleUrls: ['./auth-modal.component.css']
 })
-export class AuthModalComponent implements OnChanges {
+export class AuthModalComponent   implements OnInit{
+
+  constructor(public modal : ModalService){
+
+  }
+
+  ngOnInit(): void {
+    this.modal.register('auth')
+    this.modal.register('test')
+  }
    
-   @Input() authHidden: boolean = false;
-
-   @Output() authHiddenChange = new EventEmitter();
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.authHidden);
-  }
-
-
-  authHide(){
-    this.authHidden = !this.authHidden;
-    this.authHiddenChange.emit(this.authHidden) ;
-  }
-
-
-  authHide2(){
-    
-  }
-
+ 
 
 
 }

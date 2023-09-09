@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output  } from '@angular/core';
+import { ModalService } from './services/modal.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -6,11 +9,14 @@ import { Component, EventEmitter, Input, OnInit, Output  } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  {
-  
-  hidden = true
+   
+  constructor(public modal : ModalService){
 
-  ishidden(){
-    this.hidden = !this.hidden
+  }
+
+
+  openModal(){
+    this.modal.toggleHidden()
   }
 }
   
